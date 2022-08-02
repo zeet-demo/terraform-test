@@ -1,22 +1,22 @@
 terraform {
   required_providers {
     random = {
-      source = "hashicorp/random"
+      source  = "hashicorp/random"
       version = "3.3.2"
     }
   }
 }
 
 variable "min" {
-  type = number
+  type        = number
   description = "The minimum value"
-  default = 1000
+  default     = 1000
 }
 
 variable "max" {
-  type = number
+  type        = number
   description = "The maximum value"
-  default = 9999
+  default     = 9999
 }
 
 resource "random_integer" "value" {
